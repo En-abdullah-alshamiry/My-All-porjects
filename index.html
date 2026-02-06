@@ -1,69 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto 3D - نظام التشفير المتقدم</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts: Cairo for Arabic, Outfit for English -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- CryptoJS Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-</head>
-<body>
-    <div class="background-decor">
-        <div class="sphere s1"></div>
-        <div class="sphere s2"></div>
-        <div class="sphere s3"></div>
-    </div>
-
-    <main class="container">
-        <div class="glass-card" id="card">
-            <div class="card-content">
-                <header>
-                    <h1>تشفير البيانات الحديث</h1>
-                    <p>نظام آمن يدعم خوارزميات DES, 3DES, AES</p>
-                </header>
-
-                <div class="input-group">
-                    <label for="algo-select">اختر الخوارزمية</label>
-                    <div class="select-wrapper">
-                        <select id="algo-select">
-                            <option value="AES">Advanced Encryption Standard (AES)</option>
-                            <option value="DES">Data Encryption Standard (DES)</option>
-                            <option value="TripleDES">Triple DES (3DES)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label for="data-input">النص المطلوب (أو النص المشفر)</label>
-                    <textarea id="data-input" placeholder="أدخل النص هنا..."></textarea>
-                </div>
-
-                <div class="input-group">
-                    <label for="key-input">مفتاح التشفير (Secret Key)</label>
-                    <input type="password" id="key-input" placeholder="أدخل المفتاح السري...">
-                </div>
-
-                <div class="button-row">
-                    <button id="encrypt-btn" class="btn primary">تشفير <span class="icon">🔒</span></button>
-                    <button id="decrypt-btn" class="btn secondary">فك التشفير <span class="icon">🔓</span></button>
-                </div>
-
-                <div class="output-section">
-                    <label>النتيجة:</label>
-                    <div class="result-box">
-                        <textarea id="result-output" readonly placeholder="ستظهر النتيجة هنا..."></textarea>
-                        <button id="copy-btn" class="copy-btn" title="نسخ">
-                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M16,1H4C2.9,1,2,1.9,2,3v14h2V3h12V1z M19,5H8C6.9,5,6,5.9,6,7v14c0,1.1,0.9,2,2,2h11c1.1,0,2-0.9,2-2V7C21,5.9,20.1,5,19,5z M19,21H8V7h11V21z"/></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
